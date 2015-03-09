@@ -1,0 +1,40 @@
+Initialize engine version: 4.5.3f3 (fca41a4fabea)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA Quadro 2000 (ID=0xdd8)
+    Vendor:   NVIDIA
+    VRAM:     978 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\jcc8615\Desktop\trunk\binaries\first_build_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\jcc8615\Desktop\trunk\binaries\first_build_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\jcc8615\Desktop\trunk\binaries\first_build_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\jcc8615\Desktop\trunk\binaries\first_build_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\jcc8615\Desktop\trunk\binaries\first_build_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\jcc8615\Desktop\trunk\binaries\first_build_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\jcc8615\Desktop\trunk\binaries\first_build_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\jcc8615\Desktop\trunk\binaries\first_build_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\jcc8615\Desktop\trunk\binaries\first_build_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\jcc8615\Desktop\trunk\binaries\first_build_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\jcc8615\Desktop\trunk\binaries\first_build_Data\Managed\HOTween.dll (this message is harmless)
+Loading C:\Users\jcc8615\Desktop\trunk\binaries\first_build_Data\Managed\HOTween.dll into Unity Child Domain
+- Completed reload, in  0.483 seconds
+desktop: 1920x1080 59Hz; virtual: 3120x1920 at -1200,-418
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\jcc8615\Desktop\trunk\binaries\first_build_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\jcc8615\Desktop\trunk\binaries\first_build_Data\Managed\System.dll (this message is harmless)
+WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
+The tree TreeSpringLarge must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/Runtime/Terrain/TreeDatabase.cpp Line: 80)
+
+UnloadTime: 4.492471 ms
+System memory in use before: 78.1 MB.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 75.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1477.
+Total: 2.000740 ms (FindLiveObjects: 0.061587 ms CreateObjectMapping: 0.022667 ms MarkObjects: 0.568401 ms  DeleteObjects: 0.516651 ms)
+
+WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
