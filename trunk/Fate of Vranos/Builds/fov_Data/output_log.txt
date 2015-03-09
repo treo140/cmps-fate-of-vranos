@@ -1,0 +1,119 @@
+Initialize engine version: 4.5.3f3 (fca41a4fabea)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA Quadro 2000 (ID=0xdd8)
+    Vendor:   NVIDIA
+    VRAM:     978 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\HOTween.dll (this message is harmless)
+Loading L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\HOTween.dll into Unity Child Domain
+- Completed reload, in  0.785 seconds
+desktop: 1920x1080 59Hz; virtual: 3120x1920 at -1200,-418
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\System.dll (this message is harmless)
+WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
+The tree TreeSpringLarge must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/Runtime/Terrain/TreeDatabase.cpp Line: 80)
+
+UnloadTime: 6.635205 ms
+System memory in use before: 78.4 MB.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 76.0 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1597.
+Total: 42.160545 ms (FindLiveObjects: 0.086821 ms CreateObjectMapping: 0.025233 ms MarkObjects: 0.684306 ms  DeleteObjects: 0.550438 ms)
+
+WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
+Platform assembly: L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\Mono.Security.dll (this message is harmless)
+Platform assembly: L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\Boo.Lang.dll (this message is harmless)
+Platform assembly: L:\public\CMPS327fall2014Game2\Group2\Fate of Vranos\Builds\fov_Data\Managed\UnityScript.Lang.dll (this message is harmless)
+I got the player, hahahahahaaaa!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+EnemyBattleManager:OnTriggerEnter(Collider) (at C:\Users\jcc8615\Desktop\trunk\Assets\Members\Zeke\Battle\EnemyBattleManager.cs:30)
+ 
+(Filename: C Line: 0)
+
+The battle has started!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+PlayerBattleManager:StartBattle(Collider) (at C:\Users\jcc8615\Desktop\trunk\Assets\Members\Zeke\Battle\PlayerBattleManager.cs:43)
+PlayerBattleController:OnTriggerEnter(Collider) (at C:\Users\jcc8615\Desktop\trunk\Assets\Members\Dre\PlayerBattleController.cs:110)
+ 
+(Filename: C Line: 0)
+
+BattleActive has been set to True by collider
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineMonoBehaviour.cs:99)
+PlayerBattleController:OnTriggerEnter(Collider) (at C:\Users\jcc8615\Desktop\trunk\Assets\Members\Dre\PlayerBattleController.cs:111)
+ 
+(Filename: C Line: 0)
+
+Casting Holy Strike!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+<AttackEnemy>c__Iterator7:MoveNext() (at C:\Users\jcc8615\Desktop\trunk\Assets\Members\Zeke\Battle\PlayerBattleManager.cs:108)
+ 
+(Filename: C Line: 0)
+
+Ouch! I took damage!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+EnemyStats:TakeDamage(Single) (at C:\Users\jcc8615\Desktop\trunk\Assets\Members\Zeke\Entity\EnemyStats.cs:32)
+<AttackEnemy>c__Iterator7:MoveNext() (at C:\Users\jcc8615\Desktop\trunk\Assets\Members\Zeke\Battle\PlayerBattleManager.cs:112)
+ 
+(Filename: C Line: 0)
+
+I got the player, hahahahahaaaa!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+EnemyBattleManager:OnTriggerEnter(Collider) (at C:\Users\jcc8615\Desktop\trunk\Assets\Members\Zeke\Battle\EnemyBattleManager.cs:30)
+ 
+(Filename: C Line: 0)
+
+The battle has started!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+PlayerBattleManager:StartBattle(Collider) (at C:\Users\jcc8615\Desktop\trunk\Assets\Members\Zeke\Battle\PlayerBattleManager.cs:43)
+PlayerBattleController:OnTriggerEnter(Collider) (at C:\Users\jcc8615\Desktop\trunk\Assets\Members\Dre\PlayerBattleController.cs:110)
+ 
+(Filename: C Line: 0)
+
+BattleActive has been set to True by collider
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineMonoBehaviour.cs:99)
+PlayerBattleController:OnTriggerEnter(Collider) (at C:\Users\jcc8615\Desktop\trunk\Assets\Members\Dre\PlayerBattleController.cs:111)
+ 
+(Filename: C Line: 0)
+
+Casting Holy Strike!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+<AttackEnemy>c__Iterator7:MoveNext() (at C:\Users\jcc8615\Desktop\trunk\Assets\Members\Zeke\Battle\PlayerBattleManager.cs:108)
+ 
+(Filename: C Line: 0)
+
+Ouch! I took damage!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+EnemyStats:TakeDamage(Single) (at C:\Users\jcc8615\Desktop\trunk\Assets\Members\Zeke\Entity\EnemyStats.cs:32)
+<AttackEnemy>c__Iterator7:MoveNext() (at C:\Users\jcc8615\Desktop\trunk\Assets\Members\Zeke\Battle\PlayerBattleManager.cs:112)
+ 
+(Filename: C Line: 0)
+
