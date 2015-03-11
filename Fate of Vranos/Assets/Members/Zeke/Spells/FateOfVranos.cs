@@ -8,6 +8,9 @@ public class FateOfVranos : BaseSpell {
 	private GameObject _spell;
 	private int _cooldown;
 	private int _turnsLeft;
+	private Transform _target;
+	private ParticleSystem _particleSystem;
+
 	
 	private float _spellDamage;
 	
@@ -85,11 +88,34 @@ public class FateOfVranos : BaseSpell {
 		}
 	}
 
-	public void Cast ()
+	public Transform Target {
+		get {
+			return _target;
+		}
+		set {
+			_target = value;
+		}
+	}
+	
+	public ParticleSystem MySpell {
+		get {
+			return _particleSystem;
+		}
+		set {
+			_particleSystem = value;
+		}
+	}
+
+
+	public void Cast (Transform target)
 	{
+		_spell.gameObject.transform.LookAt (_target);
 		_spell.gameObject.particleSystem.Play ();
+		AudioSource _audio = _spell.gameObject.particleSystem.GetComponent<AudioSource> ();
+		_audio.Play();
 		//throw new System.NotImplementedException ();
 	}
+
 	
 	#endregion
 	

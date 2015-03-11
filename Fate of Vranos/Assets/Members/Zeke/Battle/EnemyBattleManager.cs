@@ -87,7 +87,7 @@ public class EnemyBattleManager : MonoBehaviour {
 		if (myStats.missionNumber == 0) {
 			yield return new WaitForSeconds (.7f);			
 		}
-		enemySpells[myStats.missionNumber].Cast ();
+		enemySpells[myStats.missionNumber].Cast (transform);
 		yield return new WaitForSeconds(.1f);
 		_enemyAnimControl.ResetAttack ();
 

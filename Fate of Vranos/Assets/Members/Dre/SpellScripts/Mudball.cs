@@ -10,7 +10,8 @@ public class Mudball : BaseSpell {
 	private GameObject _spell;
 	private int _cooldown;
 	private int _turnsLeft;
-	
+	private Transform _target;
+	private ParticleSystem _particleSystem;
 	
 	private float _spellDamage;
 	
@@ -98,9 +99,28 @@ public class Mudball : BaseSpell {
 			//throw new System.NotImplementedException ();
 		}
 	}
+
+	public Transform Target {
+		get {
+			return _target;
+		}
+		set {
+			_target = value;
+		}
+	}
 	
-	public void Cast ()
+	public ParticleSystem MySpell {
+		get {
+			return _particleSystem;
+		}
+		set {
+			_particleSystem = value;
+		}
+	}
+	
+	public void Cast (Transform target)
 	{
+		_spell.gameObject.transform.LookAt (_target);
 		_spell.gameObject.particleSystem.Play ();
 		AudioSource _audio = _spell.gameObject.particleSystem.GetComponent<AudioSource> ();
 		_audio.Play();
