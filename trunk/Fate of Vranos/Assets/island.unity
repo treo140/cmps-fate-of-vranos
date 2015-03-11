@@ -9561,6 +9561,7 @@ MonoBehaviour:
   m_LightmapIndex: -1
   m_LightmapSize: 1024
   m_DrawTreesAndFoliage: 1
+  m_CollectDetailPatches: 1
   m_MaterialTemplate: {fileID: 0}
 --- !u!4 &91715064
 Transform:
@@ -28642,7 +28643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredObjects: []
-  Reference: {fileID: 1112989763}
+  Reference: {fileID: 0}
 --- !u!4 &360373579
 Transform:
   m_ObjectHideFlags: 0
@@ -63891,98 +63892,6 @@ MonoBehaviour:
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
   mSpriteName: Button
   mFillCenter: 1
---- !u!114 &1112989763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7debdd6cf0c58417c8b76cf5f31b1c12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entries:
-  - gameObject: {fileID: 1006898488}
-    Id: 71a9ddbf-4e58-4734-8b4e-44e00c8b97c4
-  - gameObject: {fileID: 1934275977}
-    Id: d3ec3e4c-d2ce-49a7-9d89-39da918298fd
-  - gameObject: {fileID: 1837338999}
-    Id: 36bdff6a-eed9-443e-84ce-3a7ba210ea46
-  - gameObject: {fileID: 973048189}
-    Id: 3d1d5ed4-df5c-4d81-9c77-78842fcddfb2
-  - gameObject: {fileID: 1960092483}
-    Id: 0e88fde4-bd48-4fd9-94be-7b45f2f3c005
-  - gameObject: {fileID: 2139575334}
-    Id: bdc614fe-dc08-43be-a858-a96fb7dce644
-  - gameObject: {fileID: 1837189382}
-    Id: e108461b-637c-418a-aa7b-6b492c3d9379
-  - gameObject: {fileID: 2010554955}
-    Id: 698addf8-4d8c-43b9-b917-23f5d8fde808
-  - gameObject: {fileID: 1557222720}
-    Id: fd0b3894-f50a-4b2d-abdb-6931ec49a241
-  - gameObject: {fileID: 1822970360}
-    Id: 6582e8b1-4d41-43f6-86e4-1451d26c5d4f
-  - gameObject: {fileID: 2037765898}
-    Id: 656b0bf0-9c04-47db-9037-7fb944187757
-  - gameObject: {fileID: 1726080004}
-    Id: baff2cb9-290d-4905-84e7-1813b8ff6e98
-  - gameObject: {fileID: 1537581050}
-    Id: 1d132b3b-4f7b-403f-902c-064853499c45
-  - gameObject: {fileID: 503097369}
-    Id: 77b9340c-7950-4562-9ba2-189e8d10780e
-  - gameObject: {fileID: 354880714}
-    Id: dce666cc-74e4-4747-8a59-2d532e7864bc
-  - gameObject: {fileID: 405400489}
-    Id: c56dae81-84c9-4ab3-8293-9052cbcb88b9
-  - gameObject: {fileID: 761264270}
-    Id: 9a53e9b0-447f-4b65-ba90-7a8dc987d105
-  - gameObject: {fileID: 960095921}
-    Id: cfed554a-697e-4980-963e-46b23e8baa33
-  - gameObject: {fileID: 1763666182}
-    Id: 5c98e81d-fd6f-47b6-8ed5-a14cd561424b
-  - gameObject: {fileID: 86872760}
-    Id: 030246a3-4193-4d34-819a-4b973b505fb3
-  - gameObject: {fileID: 474809208}
-    Id: 9f7178d0-f214-4e84-ae38-0c4be9d2b224
-  - gameObject: {fileID: 1096034035}
-    Id: 30a7b011-025e-4853-b0e1-33973419683c
-  - gameObject: {fileID: 406532236}
-    Id: 454892d9-f5c2-4dcf-a680-de9ee9a51c52
-  - gameObject: {fileID: 523023668}
-    Id: cb10b103-5457-4c0a-b228-2eaccd11394e
-  - gameObject: {fileID: 870781378}
-    Id: b8c9c713-f1a8-4f24-86d5-693f56975006
-  - gameObject: {fileID: 374242999}
-    Id: 786143ce-f488-4cf0-a19d-8940ebeca779
-  - gameObject: {fileID: 967384962}
-    Id: 50b46d36-1fcf-4af3-a40a-9585c7ce3de5
-  - gameObject: {fileID: 430160447}
-    Id: 4f8417de-b975-4219-a4ff-54e7eb81eb13
-  - gameObject: {fileID: 881159951}
-    Id: 2bbdc46d-7660-4b3a-8291-00cf683e56f5
-  - gameObject: {fileID: 992917511}
-    Id: f5cddc7c-6262-46fd-ab3e-001e386ad63c
-  - gameObject: {fileID: 1170024356}
-    Id: 26ec9d55-f448-43e1-9938-ccfe5413b869
-  - gameObject: {fileID: 1809845169}
-    Id: 766552ad-6038-492e-aaff-bdfd715261db
-  - gameObject: {fileID: 1963631621}
-    Id: 49d54ede-e9ac-43b0-bcc6-5bea5e65f2e6
-  - gameObject: {fileID: 1531040617}
-    Id: 4b14b1ff-cc3a-45e5-9474-daaff6ced665
-  - gameObject: {fileID: 924135156}
-    Id: 9eb05062-a87d-46fc-91af-5f87b02ab848
-  - gameObject: {fileID: 1874261877}
-    Id: 081c3d2e-bed4-445f-9922-d5f801c9f447
-  - gameObject: {fileID: 1986781157}
-    Id: 3558d673-a191-40f9-81b7-a3ccd355f079
-  - gameObject: {fileID: 1628055661}
-    Id: 1ee8126f-256b-4820-a944-6ea814412fdc
-  - gameObject: {fileID: 28379973}
-    Id: beb38531-fd6d-413e-a609-10a3b497a678
-  - gameObject: {fileID: 634398281}
-    Id: 6b168a7d-b1aa-49a1-a440-67c5aef002e0
 --- !u!1 &1117848457
 GameObject:
   m_ObjectHideFlags: 0
@@ -69976,6 +69885,7 @@ MonoBehaviour:
   m_LightmapIndex: -1
   m_LightmapSize: 1024
   m_DrawTreesAndFoliage: 1
+  m_CollectDetailPatches: 1
   m_MaterialTemplate: {fileID: 0}
 --- !u!4 &1227352271
 Transform:
