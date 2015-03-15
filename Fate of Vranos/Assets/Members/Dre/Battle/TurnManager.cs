@@ -43,18 +43,16 @@ public class TurnManager : MonoBehaviour {
 	public List<Entity> people = new List<Entity>();
 	public List<Entity> turnQueue = new List<Entity>();
 
+	public List<List<Transform>> targets = new List<List<Transform>>();
+
 	public Entity turnPlayer;
+
+	public List<BaseSpell> turnPlayerSpells;
+
+	public int tempCharge;
 
 	// Use this for initialization
 	void Start () {
-
-/*		foreach(Entity e in people)
-		{
-			if(e is PlayerEntity) people.Insert (0,e);
-			else if(e is EnemyEntity) people.Add (e);
-		} */
-
-		//
 	
 	}
 	
@@ -72,7 +70,8 @@ public class TurnManager : MonoBehaviour {
 
 			//List gets sort into the order of fastest to slowest			
 			turnQueue.Sort (new entityComparer ());
-
+			turnPlayer = turnQueue[0];
+			MakeSpellButtons();
 			currentState = BattleStates.MoveSelection;
 			break;
 
@@ -135,7 +134,7 @@ public class TurnManager : MonoBehaviour {
 				break;
 			}
 
-
+			 
 
 			turnQueue.Remove(turnPlayer);
 			if(turnQueue.Count <= 0)
@@ -178,16 +177,61 @@ public class TurnManager : MonoBehaviour {
 		}
 
 		currentState = BattleStates.Start;
-
 	}
 
 	public void Win()
 	{
+		turnQueue.Clear ();
+		turnPlayerSpells.Clear ();
 		currentState = BattleStates.NoBattle;
 	}
 
 	public void Lose()
 	{
+		turnQueue.Clear ();
+		turnPlayerSpells.Clear ();
 		currentState = BattleStates.NoBattle;
 	}
+
+	public void addSpell(BaseSpell spell)
+	{
+		//set target
+		//tempCharge -= spell.ChargeCost;
+		turnPlayerSpells.Add (spell);
+		ChooseTargets (spell);
+
+	}
+	public void MakeSpellButtons()
+	{
+		//clear UIgrid for attacks
+		//add charge button to the list
+		foreach (BaseSpell spell in turnPlayer.knownSpells) 
+		{
+			//make new UIButton from attack button prefab
+			AttackButtonScript attackButtonScript = new AttackButtonScript();
+			attackButtonScript.spell = spell;
+			//add attackButtonScript to UIgrid for attacks
+		}
+		//add cancel/clear button to the list?
+		//add done button to the list
+	}
+	public void ChooseTargets(BaseSpell spell)
+	{
+		Transform CurrentTarget;
+		/*switch(spell.targetType)
+		 * {
+		 * case TargetType.SingleEnemy:
+		 * 		//show enemy target buttons
+		 * 		break;
+		 * case TargetType.SingleAlly:
+		 * 		//Show ally target buttons
+		 * 		break;
+		 * default:
+		 * 		targets.add(CurrentTarget);
+		 * 		//keep spell select gui on the screen
+		 * 		break;
+		 * }
+		//once confirmed target to list of all targets*/
+	}
+
 }
