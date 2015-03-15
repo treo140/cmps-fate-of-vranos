@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public abstract class Entity {
 	float attack;
@@ -8,6 +9,7 @@ public abstract class Entity {
 	public int speed;
 	int charge;
 	public float currentHealth;
+	public List<BaseSpell> knownSpells = new List<BaseSpell>();
 
 	Entity()
 	{

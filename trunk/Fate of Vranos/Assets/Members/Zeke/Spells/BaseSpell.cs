@@ -11,6 +11,8 @@ public interface BaseSpell {
 	int TurnsLeft{ get; set; }
 	Transform Target { get; set; }
 	ParticleSystem MySpell { get; set; }
+
+	//int ChargeCost{ get; set; }
 	
 
 	void Cast(Transform target);
