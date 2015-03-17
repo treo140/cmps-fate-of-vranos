@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class LightningBolt : Spell {
 
@@ -20,6 +21,10 @@ public class LightningBolt : Spell {
 	{
 		throw new System.NotImplementedException ();
 	}
+
+	
+	public override void Cast (){}
+	public override void Cast (List<Transform> targets){}
 
 	public override void Animate ()
 	{

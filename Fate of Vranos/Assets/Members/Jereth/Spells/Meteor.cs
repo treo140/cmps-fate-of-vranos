@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Meteor : Spell {
 
@@ -35,7 +36,7 @@ public class Meteor : Spell {
 	}
 
 	public override void Cast (){}
-	public override void Cast (Transform[] targets){}
+	public override void Cast (List<Transform> targets){}
 
 	public override void Animate ()
 	{
