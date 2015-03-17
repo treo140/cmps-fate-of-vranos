@@ -34,6 +34,9 @@ public class Meteor : Spell {
 
 	}
 
+	public override void Cast (){}
+	public override void Cast (Transform[] targets){}
+
 	public override void Animate ()
 	{
 

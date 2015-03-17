@@ -50,6 +50,6 @@ public class SpellTest : MonoBehaviour {
 		GO = Instantiate(prefab[0], new Vector3 (target.transform.position.x, (target.transform.position.y + 10f),
 		                                                 target.transform.position.z), prefab[0].transform.rotation) as GameObject;
 		//GO.SetActive (false);
-		meteor = new Meteor ("Meteor", "Flying Rock", 50f, 1, SpellEffect.none, GO, platform);
+		meteor = new Meteor ("Meteor", "Flying Rock", 50f, 1, SpellEffect.none, GO, platform, TargetType.SingleEnemies);
 	}
 }
