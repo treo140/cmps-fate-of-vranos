@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MagicMissiles : Spell {
 
@@ -18,6 +19,9 @@ public class MagicMissiles : Spell {
 		//Each missile does its own damage and a powered up version has more than one set of three.
 
 	}
+	
+	public override void Cast (){}
+	public override void Cast (List<Transform> targets){}
 
 	public override void Animate ()
 	{

@@ -7,7 +7,7 @@ public class AttackButtonScript : MonoBehaviour {
 	private TurnManager turnManager;
 	private UIButton thisButton;
 	
-	public BaseSpell spell;
+	public Spell spell;
 
 
 	// Use this for initialization

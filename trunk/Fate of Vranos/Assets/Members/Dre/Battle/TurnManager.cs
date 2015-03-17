@@ -47,7 +47,7 @@ public class TurnManager : MonoBehaviour {
 
 	public Entity turnPlayer;
 
-	public List<BaseSpell> turnPlayerSpells;
+	public List<Spell> turnPlayerSpells;
 
 	public int tempCharge;
 
@@ -193,10 +193,9 @@ public class TurnManager : MonoBehaviour {
 		currentState = BattleStates.NoBattle;
 	}
 
-	public void addSpell(BaseSpell spell)
+	public void addSpell(Spell spell)
 	{
-		//set target
-		//tempCharge -= spell.ChargeCost;
+		tempCharge -= spell.Cost;
 		turnPlayerSpells.Add (spell);
 		ChooseTargets (spell);
 
@@ -205,7 +204,7 @@ public class TurnManager : MonoBehaviour {
 	{
 		//clear UIgrid for attacks
 		//add charge button to the list
-		foreach (BaseSpell spell in turnPlayer.knownSpells) 
+		foreach (Spell spell in turnPlayer.knownSpells) 
 		{
 			//make new UIButton from attack button prefab
 			AttackButtonScript attackButtonScript = new AttackButtonScript();
@@ -215,23 +214,41 @@ public class TurnManager : MonoBehaviour {
 		//add cancel/clear button to the list?
 		//add done button to the list
 	}
-	public void ChooseTargets(BaseSpell spell)
+	public void ChooseTargets(Spell spell)
 	{
-		Transform CurrentTarget;
-		/*switch(spell.targetType)
-		 * {
-		 * case TargetType.SingleEnemy:
-		 * 		//show enemy target buttons
-		 * 		break;
-		 * case TargetType.SingleAlly:
-		 * 		//Show ally target buttons
-		 * 		break;
-		 * default:
-		 * 		targets.add(CurrentTarget);
-		 * 		//keep spell select gui on the screen
-		 * 		break;
-		 * }
+		Transform CurrentTarget = gameObject.transform;
+		switch(spell.tarType)
+		  {
+		  case TargetType.SingleEnemy:
+		  		//show enemy target buttons
+		  		break;
+		  case TargetType.SingleAlly:
+		  		//Show ally target buttons
+		  		break;
+		  default:
+			List<Transform> currentTargets = new List<Transform>();
+			currentTargets.Add(CurrentTarget);
+			targets.Add(currentTargets);
+		  		//keep spell select gui on the screen
+		  		break;
+		  }
 		//once confirmed target to list of all targets*/
 	}
-
+	public void castSpells(){
+	//********************************************************************
+	//NEEDS TO BE MODIFIED TO PLAY SPELLS WITHOUT INTURRUPTING EACHOTHER
+	//********************************************************************
+		foreach(Spell spell in turnPlayerSpells){
+			switch(spell.tarType)
+			{
+				case TargetType.SingleEnemy:
+				case TargetType.SingleAlly:
+					spell.Cast(targets[turnPlayerSpells.IndexOf(spell)]);
+					break;
+				default:
+					spell.Cast();
+					break;
+			}
+		}
+	}
 }
