@@ -12,6 +12,7 @@ public abstract class Spell
 	public GameObject particleSystem;
 	public GameObject platform;
 	public TargetType tarType;
+	public GameObject Caster;
 
 	public Spell()
 	{
@@ -36,7 +37,9 @@ public abstract class Spell
 		Effect = SpellEffect.none;
 	}
 
-	public Spell(string name, string description, float damage, int cost, SpellEffect effect, GameObject pSystem, GameObject Platform, TargetType tar)
+	public Spell(string name, string description, float damage, int cost,
+	             SpellEffect effect, GameObject pSystem, GameObject Platform, TargetType tar,
+	             GameObject caster)
 	{
 		Name = name;
 		Description = description;
@@ -45,6 +48,7 @@ public abstract class Spell
 		Effect = effect;
 		particleSystem = pSystem;
 		platform = Platform;
+		Caster = caster;
 
 	}
 
