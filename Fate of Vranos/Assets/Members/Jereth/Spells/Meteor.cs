@@ -6,7 +6,9 @@ public class Meteor : Spell {
 
 
 
-	public Meteor(string name, string description, float damage, int cost, SpellEffect effect, GameObject GO, GameObject Platform, TargetType tar)
+	public Meteor(string name, string description, float damage, int cost,
+	              SpellEffect effect, GameObject GO, GameObject Platform, TargetType tar,
+	              GameObject caster)
 	{
 		Debug.Log (Platform.name);
 		Debug.Log (GO.name);
@@ -16,27 +18,30 @@ public class Meteor : Spell {
 		Cost = cost;
 		Effect = effect;
 		particleSystem = GO;
+		particleSystem.SetActive (false);
 		platform = Platform;
 		tarType = tar;
-		//GameObject g = GameObject.Find ("LazyLoadBehaviour");
-		//Debug.Log (g.name);
-		particleSystem.SetActive (true);
-		SetRandomStartPoint randStart = GO.GetComponentInChildren<SetRandomStartPoint> ();
-		//SetRandomStartPoint r = particleSystem.GetComponent<SetRandomStartPoint> ();
-		randStart.StartPointGo = Platform;
+		Caster = caster;
+
 		particleSystem.SetActive (false);
 		
 	}
 
-	public override void Cast (Transform target)
+	public override void Cast (GameObject[] target)
 	{
-		SetTarget (target);
+		particleSystem.transform.position = particleSystem.transform.parent.position;
+		SetTarget (target[0]);
 		particleSystem.SetActive (true);
 
 	}
 
 	public override void Cast (){}
 	public override void Cast (List<Transform> targets){}
+
+	public override void Cast(GameObject target)
+	{
+
+	}
 
 	public override void Animate ()
 	{
@@ -50,15 +55,28 @@ public class Meteor : Spell {
 		//throw new System.NotImplementedException ();
 	}
 
-	private void SetTarget(Transform target)
+	private void SetTarget(GameObject target)
 	{	
 		//particleSystem.SetActive (true);
-		particleSystem.transform.position = new Vector3 (target.transform.position.x, (target.transform.position.y + 10),
-		                                                 target.transform.position.z);
+		//particleSystem.transform.position = new Vector3 (target.transform.position.x, (target.transform.position.y + 10),
+		//                                                 target.transform.position.z);
 		//particleSystem.SetActive (false);
-		EffectSettings eSettings = particleSystem.GetComponent<EffectSettings> ();
-		eSettings.Target = target.gameObject;
+		//EffectSettings eSettings = particleSystem.GetComponent<EffectSettings> ();
+		//eSettings.Target = target;
+		particleSystem.SetActive (false);
 	}
 
+	public void StopAnimation()
+	{
+		MoveOnGround isFinished;
+		isFinished = particleSystem.GetComponentInChildren<MoveOnGround> ();
+		if (!isFinished.isFinished)
+						particleSystem.SetActive (false);
+	}
+
+	/*public void pDestroy()
+	{
+		Destroy (particleSystem);
+	}*/
 
 }

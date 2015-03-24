@@ -84,7 +84,7 @@ GameObject:
   - 4: {fileID: 844333}
   - 114: {fileID: 844335}
   - 154: {fileID: 844334}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East to West Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,6 +181,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f3bb1a598e90954fade2021e122eed3, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f3bb1a598e90954fade2021e122eed3, type: 2}
   m_RootGameObject: {fileID: 289674028}
@@ -194,7 +198,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 20722531}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Finger08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,6 +257,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 20ad09cff6d94df49803e33d03bef335, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20ad09cff6d94df49803e33d03bef335, type: 2}
   m_RootGameObject: {fileID: 163269815}
@@ -266,7 +274,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 51031912}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Finger07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,6 +332,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 43
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c954ed1e5513ac34bb6eda18cc3a9701, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c954ed1e5513ac34bb6eda18cc3a9701, type: 2}
   m_RootGameObject: {fileID: 1163499908}
@@ -337,7 +349,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 71893369}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Finger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,6 +369,120 @@ Transform:
   - {fileID: 2106649961}
   m_Father: {fileID: 319878586}
   m_RootOrder: 1
+--- !u!1 &77883618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 77883619}
+  - 114: {fileID: 77883621}
+  - 154: {fileID: 77883620}
+  m_Layer: 10
+  m_Name: Test Battleground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &77883619
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 77883618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3468.85889, y: 0, z: -1298.4574}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+--- !u!154 &77883620
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 77883618}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: c9d2d780690943b46ad1209baa75134c, type: 2}
+  m_CreateTreeColliders: 1
+--- !u!114 &77883621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 77883618}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12000, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TerrainData: {fileID: 15600000, guid: c9d2d780690943b46ad1209baa75134c, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMaximumLOD: 0
+  m_CastShadows: 1
+  m_LightmapIndex: -1
+  m_LightmapSize: 1024
+  m_DrawTreesAndFoliage: 1
+  m_CollectDetailPatches: 1
+  m_MaterialTemplate: {fileID: 0}
+--- !u!1 &78336644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 78336645}
+  - 114: {fileID: 78336646}
+  m_Layer: 0
+  m_Name: Spell Transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &78336645
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 78336644}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3380.35229, y: 1.01165771, z: -1203.47046}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 210573077}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+--- !u!114 &78336646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 78336644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6bcb45285ab27b4aa3f28e379d3960c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab:
+  - {fileID: 100022, guid: ce6e36f4f0f80764abd428a14f45e080, type: 2}
+  target:
+  - {fileID: 0}
+  effectSettings: {fileID: 0}
+  GO: {fileID: 0}
+  platform: {fileID: 0}
+  parTrans: {x: 0, y: 0, z: 0}
 --- !u!1 &83170696
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +493,7 @@ GameObject:
   - 4: {fileID: 83170697}
   - 114: {fileID: 83170699}
   - 154: {fileID: 83170698}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East to West Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +559,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 91190080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_UpperArm_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +588,7 @@ GameObject:
   - 4: {fileID: 102344706}
   - 114: {fileID: 102344705}
   - 154: {fileID: 102344704}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mountains 2 exits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +654,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 103384181}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,7 +682,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 108820111}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_Spine01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +711,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 111438169}
   - 137: {fileID: 111438170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: part03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +780,7 @@ GameObject:
   - 4: {fileID: 163269816}
   - 114: {fileID: 163269818}
   - 154: {fileID: 163269817}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Forest Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,7 +846,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 164341952}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Finger00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -779,6 +905,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 39
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 93a0e144fcf04ed47a88280b7980712d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 93a0e144fcf04ed47a88280b7980712d, type: 2}
   m_RootGameObject: {fileID: 1787682302}
@@ -822,6 +952,10 @@ Prefab:
     - target: {fileID: 400000, guid: b2df127e559dd16469c7b188704f50ab, type: 2}
       propertyPath: m_RootOrder
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2df127e559dd16469c7b188704f50ab, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2df127e559dd16469c7b188704f50ab, type: 2}
@@ -867,6 +1001,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
   m_RootGameObject: {fileID: 905268825}
@@ -882,7 +1020,7 @@ GameObject:
   - 4: {fileID: 197640987}
   - 114: {fileID: 197640989}
   - 154: {fileID: 197640988}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Top Left Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -940,6 +1078,76 @@ MonoBehaviour:
   m_DrawTreesAndFoliage: 1
   m_CollectDetailPatches: 1
   m_MaterialTemplate: {fileID: 0}
+--- !u!1 &203229246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 203229247}
+  - 33: {fileID: 203229250}
+  - 64: {fileID: 203229249}
+  - 23: {fileID: 203229248}
+  m_Layer: 9
+  m_Name: Bottom Platform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &203229247
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203229246}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.419433594, y: -.445137203, z: 3.17102051}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 210573077}
+  m_RootOrder: 2
+--- !u!23 &203229248
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203229246}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &203229249
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203229246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &203229250
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203229246}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &209932994
 Prefab:
   m_ObjectHideFlags: 0
@@ -979,6 +1187,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 32
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
   m_RootGameObject: {fileID: 974452310}
@@ -995,9 +1207,8 @@ GameObject:
   - 33: {fileID: 210573080}
   - 65: {fileID: 210573079}
   - 23: {fileID: 210573078}
-  - 114: {fileID: 210573081}
-  m_Layer: 0
-  m_Name: Cube
+  m_Layer: 9
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1010,14 +1221,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 210573076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 934.227966, y: 14.8096199, z: 522.070923}
+  m_LocalPosition: {x: 0, y: -.511657715, z: -1.15783691}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1082490940}
   - {fileID: 559147907}
-  - {fileID: 445126319}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  - {fileID: 203229247}
+  m_Father: {fileID: 78336645}
+  m_RootOrder: 0
 --- !u!23 &210573078
 Renderer:
   m_ObjectHideFlags: 0
@@ -1057,24 +1268,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 210573076}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &210573081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 210573076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6bcb45285ab27b4aa3f28e379d3960c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab:
-  - {fileID: 100022, guid: ce6e36f4f0f80764abd428a14f45e080, type: 2}
-  - {fileID: 100022, guid: ce6e36f4f0f80764abd428a14f45e080, type: 2}
-  target: {fileID: 0}
-  effectSettings: {fileID: 0}
-  GO: {fileID: 0}
-  platform: {fileID: 0}
 --- !u!1 &225850465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,7 +1278,7 @@ GameObject:
   - 4: {fileID: 225850466}
   - 114: {fileID: 225850468}
   - 154: {fileID: 225850467}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East to West Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1153,7 +1346,7 @@ GameObject:
   - 4: {fileID: 255527871}
   - 33: {fileID: 255527873}
   - 23: {fileID: 255527872}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: horn_part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1209,7 +1402,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 282083089}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_UpperArm_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1270,6 +1463,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
   m_RootGameObject: {fileID: 847930424}
@@ -1285,7 +1482,7 @@ GameObject:
   - 4: {fileID: 289674029}
   - 114: {fileID: 289674031}
   - 154: {fileID: 289674030}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Forest and Mountains Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1353,7 +1550,7 @@ GameObject:
   - 4: {fileID: 316880145}
   - 114: {fileID: 316880147}
   - 154: {fileID: 316880146}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mountains 2 exits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1419,7 +1616,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 319878586}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1483,6 +1680,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
   m_RootGameObject: {fileID: 1013797870}
@@ -1498,7 +1699,7 @@ GameObject:
   - 4: {fileID: 338796946}
   - 114: {fileID: 338796945}
   - 154: {fileID: 338796944}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Desert Mountains
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1565,7 +1766,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 361546654}
   - 137: {fileID: 361546655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: part06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1659,6 +1860,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 46
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
   m_RootGameObject: {fileID: 2089399421}
@@ -1674,7 +1879,7 @@ GameObject:
   - 4: {fileID: 398513659}
   - 114: {fileID: 398513661}
   - 154: {fileID: 398513660}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East to West Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1740,7 +1945,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427150437}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1768,7 +1973,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 429652908}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Finger03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1797,7 +2002,7 @@ GameObject:
   - 4: {fileID: 442671501}
   - 114: {fileID: 442671503}
   - 154: {fileID: 442671502}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: North to South Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1855,33 +2060,6 @@ MonoBehaviour:
   m_DrawTreesAndFoliage: 1
   m_CollectDetailPatches: 1
   m_MaterialTemplate: {fileID: 0}
---- !u!1 &445126318
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 445126319}
-  m_Layer: 0
-  m_Name: Bottom Platform
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &445126319
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 445126318}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.22271729, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 210573077}
-  m_RootOrder: 2
 --- !u!1 &447149496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,7 +2068,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 447149497}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Finger05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1919,7 +2097,7 @@ GameObject:
   - 4: {fileID: 450206428}
   - 114: {fileID: 450206430}
   - 154: {fileID: 450206429}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: North to South Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2016,6 +2194,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 38
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
   m_RootGameObject: {fileID: 844332}
@@ -2031,7 +2213,7 @@ GameObject:
   - 4: {fileID: 484108394}
   - 114: {fileID: 484108393}
   - 154: {fileID: 484108392}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: North to South Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2099,7 +2281,7 @@ GameObject:
   - 4: {fileID: 486371085}
   - 114: {fileID: 486371087}
   - 154: {fileID: 486371086}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East to West Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2165,7 +2347,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 536571246}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2193,7 +2375,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 545636522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Finger04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2252,6 +2434,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
   m_RootGameObject: {fileID: 83170696}
@@ -2265,7 +2451,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 559147907}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Middle Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2294,7 +2480,7 @@ GameObject:
   - 4: {fileID: 570750039}
   - 114: {fileID: 570750041}
   - 154: {fileID: 570750040}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mountainous Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2391,6 +2577,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1fbe3955e35ca10439954bc7ea3fb287, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fbe3955e35ca10439954bc7ea3fb287, type: 2}
   m_RootGameObject: {fileID: 1094704892}
@@ -2404,7 +2594,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 589202844}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2432,7 +2622,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 610330178}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2463,7 +2653,7 @@ GameObject:
   - 4: {fileID: 625890502}
   - 114: {fileID: 625890501}
   - 154: {fileID: 625890500}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East to West Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2560,6 +2750,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 104abe060af1d414f96f2989cc446af0, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 104abe060af1d414f96f2989cc446af0, type: 2}
   m_RootGameObject: {fileID: 1572351258}
@@ -2575,7 +2769,7 @@ GameObject:
   - 4: {fileID: 637852760}
   - 114: {fileID: 637852762}
   - 154: {fileID: 637852761}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: North to South Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2672,6 +2866,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 28
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
   m_RootGameObject: {fileID: 1924804661}
@@ -2685,7 +2883,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 652874531}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Finger04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2713,7 +2911,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 665525221}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Toe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2742,7 +2940,7 @@ GameObject:
   - 4: {fileID: 669890238}
   - 114: {fileID: 669890237}
   - 154: {fileID: 669890236}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: North to South Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2810,7 +3008,7 @@ GameObject:
   - 4: {fileID: 670617012}
   - 114: {fileID: 670617011}
   - 154: {fileID: 670617010}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East to West Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2907,6 +3105,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 21
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 20ad09cff6d94df49803e33d03bef335, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20ad09cff6d94df49803e33d03bef335, type: 2}
   m_RootGameObject: {fileID: 1332611482}
@@ -2951,6 +3153,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 42
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
   m_RootGameObject: {fileID: 1155633236}
@@ -2964,7 +3170,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 703727295}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L_tool01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3023,6 +3229,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
   m_RootGameObject: {fileID: 398513658}
@@ -3066,6 +3276,10 @@ Prefab:
     - target: {fileID: 400000, guid: 6b8b0a49eb44bcf4a991a809fd30fef9, type: 2}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6b8b0a49eb44bcf4a991a809fd30fef9, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b8b0a49eb44bcf4a991a809fd30fef9, type: 2}
@@ -3134,7 +3348,7 @@ Transform:
   m_LocalScale: {x: 1, y: .165153921, z: .277358174}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &770086524
 GameObject:
   m_ObjectHideFlags: 0
@@ -3143,7 +3357,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 770086525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3175,7 +3389,7 @@ GameObject:
   - 4: {fileID: 777649575}
   - 114: {fileID: 777649574}
   - 154: {fileID: 777649573}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Big Island Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3272,6 +3486,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e1b2e3a76392eb444a5e2035761284a0, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1b2e3a76392eb444a5e2035761284a0, type: 2}
   m_RootGameObject: {fileID: 2079570512}
@@ -3315,6 +3533,10 @@ Prefab:
     - target: {fileID: 400000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
       propertyPath: m_RootOrder
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
@@ -3360,6 +3582,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 29
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 20ad09cff6d94df49803e33d03bef335, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20ad09cff6d94df49803e33d03bef335, type: 2}
   m_RootGameObject: {fileID: 1361297943}
@@ -3404,6 +3630,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
   m_RootGameObject: {fileID: 2073456138}
@@ -3417,7 +3647,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 818381429}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: R_tool01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3447,7 +3677,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 820229833}
   - 137: {fileID: 820229834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: part05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3508,7 +3738,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 837985118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3567,6 +3797,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c954ed1e5513ac34bb6eda18cc3a9701, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c954ed1e5513ac34bb6eda18cc3a9701, type: 2}
   m_RootGameObject: {fileID: 1882409867}
@@ -3582,7 +3816,7 @@ GameObject:
   - 4: {fileID: 847930425}
   - 114: {fileID: 847930427}
   - 154: {fileID: 847930426}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: North to South Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3648,7 +3882,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 849084033}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: R_tool02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3676,7 +3910,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 851172499}
   - 137: {fileID: 851172500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: part02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3742,7 +3976,7 @@ GameObject:
   - 4: {fileID: 863366015}
   - 114: {fileID: 863366017}
   - 154: {fileID: 863366016}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Forest Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3839,6 +4073,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2df127e559dd16469c7b188704f50ab, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2df127e559dd16469c7b188704f50ab, type: 2}
   m_RootGameObject: {fileID: 1252576519}
@@ -3854,7 +4092,7 @@ GameObject:
   - 4: {fileID: 905268826}
   - 114: {fileID: 905268828}
   - 154: {fileID: 905268827}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: North to South Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3922,7 +4160,7 @@ GameObject:
   - 4: {fileID: 942896689}
   - 114: {fileID: 942896691}
   - 154: {fileID: 942896690}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Desert Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3988,7 +4226,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 951794039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4018,7 +4256,7 @@ GameObject:
   - 4: {fileID: 974452311}
   - 114: {fileID: 974452313}
   - 154: {fileID: 974452312}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East to West Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4115,6 +4353,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 51
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
   m_RootGameObject: {fileID: 669890235}
@@ -4130,7 +4372,7 @@ GameObject:
   - 4: {fileID: 978735703}
   - 114: {fileID: 978735705}
   - 154: {fileID: 978735704}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: North to South Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4198,7 +4440,7 @@ GameObject:
   - 4: {fileID: 982610950}
   - 114: {fileID: 982610949}
   - 154: {fileID: 982610948}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Forest and Mountains Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4295,6 +4537,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fc0012ce499123048abb6b4029e8847b, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc0012ce499123048abb6b4029e8847b, type: 2}
   m_RootGameObject: {fileID: 1376686715}
@@ -4339,6 +4585,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c954ed1e5513ac34bb6eda18cc3a9701, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c954ed1e5513ac34bb6eda18cc3a9701, type: 2}
   m_RootGameObject: {fileID: 1170678789}
@@ -4354,7 +4604,7 @@ GameObject:
   - 4: {fileID: 1013797871}
   - 114: {fileID: 1013797873}
   - 154: {fileID: 1013797872}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East to West Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4451,6 +4701,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 41
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
   m_RootGameObject: {fileID: 625890499}
@@ -4464,7 +4718,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1047152123}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L_tool02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4493,7 +4747,7 @@ GameObject:
   - 4: {fileID: 1062712023}
   - 33: {fileID: 1062712025}
   - 23: {fileID: 1062712024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4580,6 +4834,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c954ed1e5513ac34bb6eda18cc3a9701, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c954ed1e5513ac34bb6eda18cc3a9701, type: 2}
   m_RootGameObject: {fileID: 570750038}
@@ -4593,7 +4851,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1082490940}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Top Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4622,7 +4880,7 @@ GameObject:
   - 4: {fileID: 1094704893}
   - 114: {fileID: 1094704895}
   - 154: {fileID: 1094704894}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bottom Right Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4688,7 +4946,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1095622667}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_Spine02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4717,7 +4975,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1106795786}
   - 137: {fileID: 1106795787}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: part04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4787,7 +5045,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1120531706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Toe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4816,7 +5074,7 @@ GameObject:
   - 4: {fileID: 1126310925}
   - 114: {fileID: 1126310927}
   - 154: {fileID: 1126310926}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: North to South Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4913,6 +5171,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 19
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
   m_RootGameObject: {fileID: 486371084}
@@ -4928,7 +5190,7 @@ GameObject:
   - 4: {fileID: 1135180630}
   - 114: {fileID: 1135180632}
   - 154: {fileID: 1135180631}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: North to South Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5025,6 +5287,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ed929bfc5f8dbaf4ca74c030143462fb, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed929bfc5f8dbaf4ca74c030143462fb, type: 2}
   m_RootGameObject: {fileID: 777649572}
@@ -5040,7 +5306,7 @@ GameObject:
   - 4: {fileID: 1155633239}
   - 114: {fileID: 1155633238}
   - 154: {fileID: 1155633237}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: North to South Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5106,7 +5372,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1161232684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_UpperArm_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5138,7 +5404,7 @@ GameObject:
   - 4: {fileID: 1163499911}
   - 114: {fileID: 1163499910}
   - 154: {fileID: 1163499909}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mountainous Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5204,7 +5470,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1170283993}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_UpperArm_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5233,7 +5499,7 @@ GameObject:
   - 4: {fileID: 1170678790}
   - 114: {fileID: 1170678792}
   - 154: {fileID: 1170678791}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mountainous Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5299,7 +5565,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1188945490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5327,7 +5593,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1197587130}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Finger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5356,7 +5622,7 @@ GameObject:
   - 4: {fileID: 1202485444}
   - 114: {fileID: 1202485446}
   - 154: {fileID: 1202485445}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East to West Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5422,7 +5688,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1207421827}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Finger09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5480,6 +5746,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 23
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
   m_RootGameObject: {fileID: 1825872114}
@@ -5524,6 +5794,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
   m_RootGameObject: {fileID: 442671500}
@@ -5539,7 +5813,7 @@ GameObject:
   - 4: {fileID: 1252576522}
   - 114: {fileID: 1252576521}
   - 154: {fileID: 1252576520}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Desert Mountains
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5607,7 +5881,7 @@ GameObject:
   - 4: {fileID: 1273320853}
   - 114: {fileID: 1273320855}
   - 154: {fileID: 1273320854}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Forest and Mountains Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5673,7 +5947,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1292941069}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Skirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5700,7 +5974,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1293988604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Skirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5758,6 +6032,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
   m_RootGameObject: {fileID: 450206427}
@@ -5772,7 +6050,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1300556983}
   - 137: {fileID: 1300556984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: part06 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5892,6 +6170,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 47
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f3bb1a598e90954fade2021e122eed3, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f3bb1a598e90954fade2021e122eed3, type: 2}
   m_RootGameObject: {fileID: 982610947}
@@ -5907,7 +6189,7 @@ GameObject:
   - 4: {fileID: 1308468695}
   - 114: {fileID: 1308468697}
   - 154: {fileID: 1308468696}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East to West Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5973,7 +6255,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1311050301}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6001,7 +6283,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1312092393}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Finger09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6030,7 +6312,7 @@ GameObject:
   - 4: {fileID: 1332611483}
   - 114: {fileID: 1332611485}
   - 154: {fileID: 1332611484}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Forest Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6098,7 +6380,7 @@ GameObject:
   - 4: {fileID: 1339539904}
   - 114: {fileID: 1339539906}
   - 154: {fileID: 1339539905}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Desert Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6166,7 +6448,7 @@ GameObject:
   - 4: {fileID: 1346206774}
   - 114: {fileID: 1346206776}
   - 154: {fileID: 1346206775}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East to West Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6234,7 +6516,7 @@ GameObject:
   - 4: {fileID: 1361297944}
   - 114: {fileID: 1361297946}
   - 154: {fileID: 1361297945}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Forest Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6331,6 +6613,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 48e1c53368c865a4f98c1897c862e0b5, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48e1c53368c865a4f98c1897c862e0b5, type: 2}
   m_RootGameObject: {fileID: 197640986}
@@ -6346,7 +6632,7 @@ GameObject:
   - 4: {fileID: 1376686716}
   - 114: {fileID: 1376686718}
   - 154: {fileID: 1376686717}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Top Right Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6443,6 +6729,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6b8b0a49eb44bcf4a991a809fd30fef9, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b8b0a49eb44bcf4a991a809fd30fef9, type: 2}
   m_RootGameObject: {fileID: 942896688}
@@ -6486,6 +6776,10 @@ Prefab:
     - target: {fileID: 400000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
       propertyPath: m_RootOrder
       value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
@@ -6531,6 +6825,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 63f40e7ba9db464448b4b298d16993d2, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 63f40e7ba9db464448b4b298d16993d2, type: 2}
   m_RootGameObject: {fileID: 316880144}
@@ -6575,6 +6873,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
   m_RootGameObject: {fileID: 978735702}
@@ -6588,7 +6890,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1496147736}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Finger06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6616,7 +6918,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1506857172}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Finger08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6649,6 +6951,7 @@ GameObject:
   - 124: {fileID: 1524747441}
   - 81: {fileID: 1524747440}
   - 114: {fileID: 1524747445}
+  - 45: {fileID: 1524747446}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6738,6 +7041,14 @@ MonoBehaviour:
   ySpeed: 120
   yMinLimit: -20
   yMaxLimit: 80
+--- !u!45 &1524747446
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1524747439}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 29a28e89934a9427caefa2cec44d0ed9, type: 2}
 --- !u!1001 &1530862278
 Prefab:
   m_ObjectHideFlags: 0
@@ -6777,6 +7088,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 34
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f3bb1a598e90954fade2021e122eed3, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f3bb1a598e90954fade2021e122eed3, type: 2}
   m_RootGameObject: {fileID: 1273320852}
@@ -6791,7 +7106,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1534829258}
   - 137: {fileID: 1534829259}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: part01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6863,7 +7178,7 @@ GameObject:
   - 114: {fileID: 1536362615}
   - 54: {fileID: 1536362619}
   - 136: {fileID: 1536362618}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: _Aqua_Knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6877,7 +7192,7 @@ Transform:
   m_PrefabInternal: {fileID: 1658533295}
   m_GameObject: {fileID: 1536362613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 930.346985, y: 13.9901114, z: 522.070923}
+  m_LocalPosition: {x: 0, y: -.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 837985118}
@@ -6888,7 +7203,7 @@ Transform:
   - {fileID: 820229833}
   - {fileID: 361546654}
   - {fileID: 1300556983}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1790984396}
   m_RootOrder: 0
 --- !u!114 &1536362615
 MonoBehaviour:
@@ -6982,7 +7297,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1536362613}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: .25
   m_Height: 1
   m_Direction: 1
@@ -6998,7 +7313,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -7010,7 +7325,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1541526711}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Finger00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7038,7 +7353,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1570171981}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Finger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7068,7 +7383,7 @@ GameObject:
   - 4: {fileID: 1572351259}
   - 114: {fileID: 1572351261}
   - 154: {fileID: 1572351260}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Desert Mountains Dead end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7165,6 +7480,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 36
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
   m_RootGameObject: {fileID: 1308468694}
@@ -7209,6 +7528,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 20ad09cff6d94df49803e33d03bef335, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20ad09cff6d94df49803e33d03bef335, type: 2}
   m_RootGameObject: {fileID: 863366014}
@@ -7222,7 +7545,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1623653279}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7286,6 +7609,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
   m_RootGameObject: {fileID: 1346206773}
@@ -7296,19 +7623,19 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1790984396}
     m_Modifications:
     - target: {fileID: 400128, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 930.346985
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400128, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 13.9901114
+      value: -.5
       objectReference: {fileID: 0}
     - target: {fileID: 400128, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 522.070923
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400128, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
       propertyPath: m_LocalRotation.x
@@ -7328,12 +7655,272 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400128, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11100000, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
       propertyPath: m_Animation
       value: 
       objectReference: {fileID: 7400000, guid: fde2730436c01f24882e9c21fd6eff72, type: 3}
+    - target: {fileID: 100012, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100068, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100032, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100086, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100118, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100072, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100034, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100074, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100122, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100108, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100036, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100076, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100064, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100102, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100052, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100110, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100120, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100126, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100112, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100040, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100048, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100084, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100116, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100094, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100098, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100070, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100088, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100090, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100114, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100100, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100054, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100056, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100124, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100128, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100060, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100058, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100080, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100046, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100082, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100104, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100092, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100096, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100062, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100066, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100106, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47f6bc70a237f014e982535b214f509f, type: 2}
   m_RootGameObject: {fileID: 1536362613}
@@ -7347,7 +7934,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1668585872}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Finger06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7375,7 +7962,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1670169932}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Finger07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7404,7 +7991,7 @@ GameObject:
   - 4: {fileID: 1670563748}
   - 33: {fileID: 1670563750}
   - 23: {fileID: 1670563749}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7491,6 +8078,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 52
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 63f40e7ba9db464448b4b298d16993d2, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 63f40e7ba9db464448b4b298d16993d2, type: 2}
   m_RootGameObject: {fileID: 102344703}
@@ -7535,6 +8126,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 49
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
   m_RootGameObject: {fileID: 670617009}
@@ -7548,7 +8143,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1739501890}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7578,7 +8173,7 @@ GameObject:
   - 4: {fileID: 1768526046}
   - 114: {fileID: 1768526045}
   - 154: {fileID: 1768526044}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East to West Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7644,7 +8239,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1784726783}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7673,7 +8268,7 @@ GameObject:
   - 4: {fileID: 1787682305}
   - 114: {fileID: 1787682304}
   - 154: {fileID: 1787682303}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Necromancer's Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7731,6 +8326,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1834389793}
   m_RootOrder: 39
+--- !u!1 &1790984395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1790984396}
+  - 136: {fileID: 1790984397}
+  m_Layer: 8
+  m_Name: Enemy Transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1790984396
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1790984395}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3380.5835, y: .5, z: -1197.3606}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1536362614}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!136 &1790984397
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1790984395}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .25
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1811867455
 GameObject:
   m_ObjectHideFlags: 0
@@ -7739,7 +8376,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1811867456}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_Spine03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7769,7 +8406,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1812684434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Finger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7827,6 +8464,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 48
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
   m_RootGameObject: {fileID: 1768526043}
@@ -7842,7 +8483,7 @@ GameObject:
   - 4: {fileID: 1825872115}
   - 114: {fileID: 1825872117}
   - 154: {fileID: 1825872116}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: North to South Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7910,7 +8551,7 @@ GameObject:
   - 4: {fileID: 1834389793}
   - 114: {fileID: 1834389795}
   - 154: {fileID: 1834389794}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Main Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7981,7 +8622,7 @@ Transform:
   - {fileID: 669890238}
   - {fileID: 102344706}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!154 &1834389794
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -8058,6 +8699,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
   m_RootGameObject: {fileID: 637852759}
@@ -8073,7 +8718,7 @@ GameObject:
   - 4: {fileID: 1882409870}
   - 114: {fileID: 1882409869}
   - 154: {fileID: 1882409868}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mountainous Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8170,6 +8815,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 27
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
   m_RootGameObject: {fileID: 1202485443}
@@ -8183,7 +8832,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1916096150}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8212,7 +8861,7 @@ GameObject:
   - 4: {fileID: 1924804662}
   - 114: {fileID: 1924804664}
   - 154: {fileID: 1924804663}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East to West Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8278,7 +8927,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1929743628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8308,7 +8957,7 @@ GameObject:
   - 4: {fileID: 1929755825}
   - 114: {fileID: 1929755827}
   - 154: {fileID: 1929755826}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East to West Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8405,6 +9054,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 33
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
   m_RootGameObject: {fileID: 1126310924}
@@ -8418,7 +9071,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1996804453}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_Spine00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8448,7 +9101,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2013921640}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_R_Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8507,6 +9160,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 44
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f1a3d97901eb5b4fbed5d8490949041, type: 2}
   m_RootGameObject: {fileID: 484108391}
@@ -8520,7 +9177,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2039142310}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Finger05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8549,7 +9206,7 @@ GameObject:
   - 4: {fileID: 2073456139}
   - 114: {fileID: 2073456141}
   - 154: {fileID: 2073456140}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: North to South Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8617,7 +9274,7 @@ GameObject:
   - 4: {fileID: 2079570513}
   - 114: {fileID: 2079570515}
   - 154: {fileID: 2079570514}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bottom Left Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8685,7 +9342,7 @@ GameObject:
   - 4: {fileID: 2089399424}
   - 114: {fileID: 2089399423}
   - 154: {fileID: 2089399422}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: North to South Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8751,7 +9408,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2106649961}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Finger03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8809,6 +9466,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 37
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5a2c217af183942ad7416f7dfe4b0a, type: 2}
   m_RootGameObject: {fileID: 1929755824}
@@ -8822,7 +9483,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2121831597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bip01_L_Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}

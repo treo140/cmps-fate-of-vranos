@@ -96,6 +96,9 @@ public class ProjectileCollisionBehaviour : MonoBehaviour
     tRoot = IsRootMove ? effectSettings.transform : transform.parent;
     startPosition = tRoot.position;
 
+	//GameObject _g = GameObject.Find ("Cube");
+	//effectSettings.Target = _g;
+
     tTarget = effectSettings.Target.transform;
     if (effectSettings.EffectRadius > 0.001)
     {

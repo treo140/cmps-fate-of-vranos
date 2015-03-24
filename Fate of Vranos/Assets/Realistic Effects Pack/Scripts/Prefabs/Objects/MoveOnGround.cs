@@ -7,12 +7,12 @@ public class MoveOnGround : MonoBehaviour
   public event EventHandler<CollisionInfo> OnCollision;
   public bool IsRootMove = true;
 
-  private EffectSettings effectSettings;
-  private Transform tRoot, tTarget;
-  private Vector3 targetPos;
-  private bool isInitialized;
-  private bool isFinished;
-  private ParticleSystem[] particles;
+  public EffectSettings effectSettings;
+  public Transform tRoot, tTarget;
+  public Vector3 targetPos;
+  public bool isInitialized;
+  public bool isFinished;
+  public ParticleSystem[] particles;
 
   private void GetEffectSettingsComponent(Transform tr)
   {
@@ -70,13 +70,13 @@ public class MoveOnGround : MonoBehaviour
       return;
     var pos = tRoot.position;
     RaycastHit verticalHit;
-    Physics.Raycast(new Vector3(pos.x, 0.5f, pos.z), Vector3.down, out verticalHit);
+    Physics.Raycast(new Vector3(pos.x, pos.y, pos.z), Vector3.down, out verticalHit);
     tRoot.position = verticalHit.point;
     pos = tRoot.position;
 
     var endPoint = effectSettings.IsHomingMove ? tTarget.position : targetPos;
-    var pointOnGround = new Vector3(endPoint.x, 0, endPoint.z);
-    if (Vector3.Distance(new Vector3(pos.x, 0, pos.z), pointOnGround) <= effectSettings.ColliderRadius) {
+    var pointOnGround = new Vector3(endPoint.x, endPoint.y, endPoint.z);
+    if (Vector3.Distance(new Vector3(pos.x, pos.y, pos.z), pointOnGround) <= effectSettings.ColliderRadius) {
       effectSettings.OnCollisionHandler(new CollisionInfo());
       isFinished = true;
     }
