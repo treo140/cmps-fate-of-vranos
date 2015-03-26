@@ -27,7 +27,11 @@ public class Meteor : Spell {
 		
 	}
 
+<<<<<<< .mine
+	public override void Cast (GameObject target)
+=======
 	public override void Cast (GameObject[] target)
+>>>>>>> .r9
 	{
 		particleSystem.transform.position = particleSystem.transform.parent.position;
 		SetTarget (target[0]);
@@ -36,7 +40,7 @@ public class Meteor : Spell {
 	}
 
 	public override void Cast (){}
-	public override void Cast (List<Transform> targets){}
+	public override void Cast (List<GameObject> targets){}
 
 	public override void Cast(GameObject target)
 	{
