@@ -2,14 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public abstract class Entity {
+public abstract class Entity:MonoBehaviour {
 	float attack;
 	float defense;
 	float health;
 	public int speed;
 	int charge;
 	public float currentHealth;
-	public List<BaseSpell> knownSpells = new List<BaseSpell>();
+	public List<Spell> knownSpells = new List<Spell>();
 
 	Entity()
 	{

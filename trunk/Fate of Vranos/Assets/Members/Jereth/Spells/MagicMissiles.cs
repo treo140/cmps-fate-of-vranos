@@ -13,7 +13,7 @@ public class MagicMissiles : Spell {
 		Effect = effect;
 	}
 	
-	public override void Cast (Transform target)
+	public override void Cast (GameObject target)
 	{
 		//Magic Missiles have three missiles that fly to the target at the same time.
 		//Each missile does its own damage and a powered up version has more than one set of three.
@@ -21,7 +21,7 @@ public class MagicMissiles : Spell {
 	}
 	
 	public override void Cast (){}
-	public override void Cast (List<Transform> targets){}
+	public override void Cast (List<GameObject> targets){}
 
 	public override void Animate ()
 	{

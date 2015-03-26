@@ -53,8 +53,8 @@ public abstract class Spell
 	}
 
 	abstract public void Cast();
-	abstract public void Cast(Transform target);
-	abstract public void Cast(List<Transform> targets);
+	abstract public void Cast(GameObject target);
+	abstract public void Cast(List<GameObject> targets);
 	abstract public void Animate();
 	abstract public void doDamage();
 
