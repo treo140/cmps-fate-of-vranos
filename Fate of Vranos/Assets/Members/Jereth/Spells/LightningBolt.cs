@@ -17,14 +17,14 @@ public class LightningBolt : Spell {
 
 	}
 
-	public override void Cast (Transform target)
+	public override void Cast (GameObject target)
 	{
 		throw new System.NotImplementedException ();
 	}
 
 	
 	public override void Cast (){}
-	public override void Cast (List<Transform> targets){}
+	public override void Cast (List<GameObject> targets){}
 
 	public override void Animate ()
 	{
