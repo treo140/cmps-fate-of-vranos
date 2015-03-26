@@ -36,7 +36,14 @@ public class SpellTest : MonoBehaviour {
 			meteor.Cast (target);
 		}
 
+<<<<<<< .mine
+			GO.transform.position = new Vector3(target.transform.position.x, (target.transform.position.y + 10),
+			                                    target.transform.position.z);
+			meteor.Cast (target);
+		}
+=======
 
+>>>>>>> .r9
 	}
 
 	public void InstanceObject()
