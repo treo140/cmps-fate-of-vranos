@@ -9,7 +9,7 @@ public abstract class Spell
 	public float Damage;
 	public int Cost;
 	public SpellEffect Effect;
-	public GameObject particleSystem;
+	public List<GameObject> particleSystem;
 	public GameObject platform;
 	public TargetType tarType;
 	public GameObject Caster;
@@ -27,26 +27,26 @@ public abstract class Spell
 
 	}
 
-	public Spell(string name, string description, float damage, int cost, GameObject pSystem)
+	public Spell(float damage, int cost, GameObject pSystem)
 	{
-		Name = name;
-		Description = description;
+		Name = "Spell";
+		Description = "Spell Description";
 		Damage = damage;
 		Cost = cost;
-		particleSystem = pSystem;
+		//particleSystem = pSystem;
 		Effect = SpellEffect.none;
 	}
 
-	public Spell(string name, string description, float damage, int cost,
-	             SpellEffect effect, GameObject pSystem, GameObject Platform, TargetType tar,
+	public Spell(float damage, int cost, SpellEffect effect, Dictionary<string, GameObject> Spells,
+	             GameObject Platform, TargetType tar,
 	             GameObject caster)
 	{
-		Name = name;
-		Description = description;
+		Name = "Spell";
+		Description = "Spell Description";
 		Damage = damage;
 		Cost = cost;
 		Effect = effect;
-		particleSystem = pSystem;
+		//particleSystem = pSystem;
 		platform = Platform;
 		Caster = caster;
 
