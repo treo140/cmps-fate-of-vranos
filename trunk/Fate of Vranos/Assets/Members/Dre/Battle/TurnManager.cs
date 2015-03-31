@@ -99,6 +99,7 @@ public class TurnManager : MonoBehaviour {
 			turnQueue.Sort (new entityComparer ());
 			turnPlayer = turnQueue[0];
 			numTurns = turnPlayer.speed;
+			Messenger.Broadcast("SelectAction");
 			currentState = BattleStates.SelectAction;
 			break;
 			//Each player chooses moves until one of the following criteria are met:
@@ -114,52 +115,80 @@ public class TurnManager : MonoBehaviour {
 //*********************************************************
 		case BattleStates.SelectAction:
 			//choose atack items or combo list
-			if(Input.GetButtonDown("Fire1"))
+			if(turnPlayer is PlayerEntity)
 			{
-				switch(chosenAction)
+				if(Input.GetButtonDown("Fire1"))
 				{
-				case 1: 
-					currentState = BattleStates.SelectMove;
-					break;
-				case 2:
-					currentState = BattleStates.SelectItem;
-					break;
-				case 3:
-					currentState = BattleStates.ShowComboList;
-					break;
-				default:
-					break;
+					Messenger.Broadcast<int> ("Fire1", chosenAction);
+					switch(chosenAction)
+					{
+					case 1: 
+						Messenger.Broadcast("SelectMove");
+						currentState = BattleStates.SelectMove;
+						break;
+					case 2:
+						Messenger.Broadcast("SelectItem");
+						currentState = BattleStates.SelectItem;
+						break;
+					case 3:
+						Messenger.Broadcast("ShowComboList");
+						currentState = BattleStates.ShowComboList;
+						break;
+					default:
+						break;
+					}
+				}
+				else if(Input.GetButtonDown("Fire2"))
+				{					
+					chosenAction = 1;
+					Messenger.Broadcast<int>("UpDown",chosenAction);
+				}
+				else if(Input.GetAxis("Vertical") > 0 || Input.GetAxis("Horizontal") > 0)
+				{
+					if(chosenAction < actionsToChoose)
+						chosenAction++;
+					else 
+						chosenAction = 0;
+					Messenger.Broadcast<int>("UpDown",chosenAction);
+				}
+				else if(Input.GetAxis("Vertical") < 0 || Input.GetAxis("Horizontal") < 0)
+				{				
+					if(chosenAction > 0)
+						chosenAction--;
+					else 
+						chosenAction = actionsToChoose;					
+					Messenger.Broadcast<int>("UpDown",chosenAction);
 				}
 			}
-			else if(Input.GetAxis("Vertical") > 0 || Input.GetAxis("Horizontal") > 0)
-			{
-				if(chosenAction < actionsToChoose)
-					chosenAction++;
-				else 
-					chosenAction = 0;
-			}
-			else if(Input.GetAxis("Vertical") < 0 || Input.GetAxis("Horizontal") < 0)
-			{				
-				if(chosenAction > 0)
-					chosenAction--;
-				else 
-					chosenAction = actionsToChoose;
-			}
-			else if(Input.GetButtonDown("Fire2"))
-			{
-				chosenAction = 1;
-			}
+			else currentState = BattleStates.SelectMove;
 			break;
 //*********************************************************
 //SELECT ITEM
 //*********************************************************
 		case BattleStates.SelectItem:
-			if(Input.GetAxis("Vertical") > 0 || Input.GetAxis("Horizontal") > 0)
+			if (Input.GetButtonDown("Fire1"))
+			{
+				if(itemsToChoose > 0)
+				{
+					//add spell for item to turnplayerspells;
+
+					;
+					currentState = BattleStates.SelectItemTarget;
+				}
+			}
+			else if (Input.GetButtonDown("Fire2"))
+			{			
+				chosenItem = 0;
+				Messenger.Broadcast("SelectAction");
+				currentState = BattleStates.SelectAction;
+			}
+			else if(Input.GetAxis("Vertical") > 0 || Input.GetAxis("Horizontal") > 0)
 			{
 				if(chosenItem < itemsToChoose)
 					chosenItem++;
 				else 
 					chosenItem = 0;
+				Messenger.Broadcast<int>("UpDown",chosenItem);
 			}
 			else if(Input.GetAxis("Vertical") < 0 || Input.GetAxis("Horizontal") < 0)
 			{				
@@ -167,19 +196,7 @@ public class TurnManager : MonoBehaviour {
 					chosenItem--;
 				else 
 					chosenItem = itemsToChoose;
-			}
-			else if (Input.GetButtonDown("Fire1"))
-			{
-				if(itemsToChoose > 0)
-				{
-					//add spell for item to turnplayerspells;
-					currentState = BattleStates.SelectItemTarget;
-				}
-			}
-			else if (Input.GetButtonDown("Fire2"))
-			{			
-				chosenItem = 0;
-				currentState = BattleStates.SelectAction;
+				Messenger.Broadcast<int>("UpDown",chosenItem);
 			}
 			break;
 //*********************************************************
@@ -192,13 +209,32 @@ public class TurnManager : MonoBehaviour {
 					if(possibletarget is PlayerEntity)
 						targetsToChoose.Add(possibletarget);
 			}
+			Messenger.Broadcast<List<Entity>>("SelectItemTarget", targetsToChoose);
 
-			if(Input.GetAxis("Vertical") > 0 || Input.GetAxis("Horizontal") > 0)
+			if(Input.GetButtonDown("Fire1"))
+			{
+				targets.Add(targetsToChoose[chosenTarget].gameObject);
+				chosenTarget = 0;
+				targetsToChoose.Clear();
+				
+				Messenger.Broadcast("MoveExecution");
+				currentState = BattleStates.MoveExecution;
+			}
+			else if(Input.GetButtonDown("Fire2"))
+			{
+				turnPlayerSpells.RemoveAt(turnPlayerSpells.Count - 1);
+				targetsToChoose.Clear();
+				Messenger.Broadcast("SelectItem");
+				currentState = BattleStates.SelectItem;
+				chosenTarget = 0;
+			}
+			else if(Input.GetAxis("Vertical") > 0 || Input.GetAxis("Horizontal") > 0)
 			{
 				if(chosenTarget < targetsToChoose.Count)
 					chosenTarget++;
 				else
 					chosenTarget = 0;
+				Messenger.Broadcast<int>("UpDown",chosenTarget);
 			}
 			else if(Input.GetAxis("Vertical") < 0 || Input.GetAxis("Horizontal") < 0)
 			{
@@ -206,41 +242,30 @@ public class TurnManager : MonoBehaviour {
 					chosenTarget--;
 				else
 					chosenTarget = targetsToChoose.Count;
-			}
-			else if(Input.GetButtonDown("Fire1"))
-			{
-				targets.Add(targetsToChoose[chosenTarget].gameObject);
-				chosenTarget = 0;
-				targetsToChoose.Clear();
-
-				currentState = BattleStates.MoveExecution;
-			}
-			else if(Input.GetButtonDown("Fire2"))
-			{
-				turnPlayerSpells.RemoveAt(turnPlayerSpells.Count - 1);
-				targetsToChoose.Clear();
-				currentState = BattleStates.SelectItem;
-				chosenTarget = 0;
+				Messenger.Broadcast<int>("UpDown",chosenTarget);
 			}
 			break;
 //*********************************************************
 //SHOW COMBO LIST
 //*********************************************************
 		case BattleStates.ShowComboList:
-			if(Input.GetButtonDown("Fire2"))
-			{
-				currentState = BattleStates.SelectAction;
-			}
-			else if(Input.GetButtonDown("Fire1"))
+			if(Input.GetButtonDown("Fire1"))
 			{
 				if(comboListPageNum < comboListPageNumTotal)
 				{
 					comboListPageNum++;
+					Messenger.Broadcast<int>("UpDown",chosenAction);
 				}
 				else
 				{					
+					Messenger.Broadcast("SelectAction");
 					currentState = BattleStates.SelectAction;
 				}
+			}
+			else if(Input.GetButtonDown("Fire2"))
+			{
+				Messenger.Broadcast("SelectAction");
+				currentState = BattleStates.SelectAction;
 			}
 			break;			
 //*********************************************************
@@ -248,52 +273,60 @@ public class TurnManager : MonoBehaviour {
 //*********************************************************
 		case BattleStates.SelectMove:
 			//chose spell from list of turnplayer spells
-			if(Input.GetAxis("Vertical") > 0 || Input.GetAxis("Horizontal") > 0)
+			if(turnPlayer is PlayerEntity)
 			{
-				if(chosenSpell < turnPlayer.knownSpells.Count - 1)
-					chosenSpell++;
-				else 
-					chosenSpell = 0;
-				while(turnPlayer.knownSpells[chosenSpell].Cost > tempCharge){
-					if (chosenSpell < turnPlayer.knownSpells.Count - 1)
-						chosenSpell++;
-					else
-						chosenSpell = 0;
-				}
-			}
-			else if(Input.GetAxis("Vertical") < 0 || Input.GetAxis("Horizontal") < 0)
-			{
-				if(chosenSpell > 0)
-					chosenSpell--;
-				else 
-					chosenSpell = turnPlayer.knownSpells.Count - 1;
-				while(turnPlayer.knownSpells[chosenSpell].Cost > tempCharge){
-					if (chosenSpell > 0)
-						chosenSpell--;
-					else
-						chosenSpell = turnPlayer.knownSpells.Count - 1;
-				}
-			}
-			else if(Input.GetButtonDown("Fire1"))
-			{
-				addSpell(turnPlayer.knownSpells[chosenSpell]);
-				currentState = BattleStates.SelectSpellTarget;
-				chosenSpell = 0;
-			}
-			else if(Input.GetButtonDown("Fire2"))
-			{
-				if(turnPlayerSpells.Count > 0){	
-					tempCharge += turnPlayerSpells.Last().Cost;			
-					turnPlayerSpells.RemoveAt(turnPlayerSpells.Count - 1);
-					targets.RemoveAt(turnPlayerSpells.Count - 1);
-					numTurns++;
-				}
-				else
+				if(Input.GetButtonDown("Fire1"))
 				{
-					currentState = BattleStates.SelectAction;
+					addSpell(turnPlayer.knownSpells[chosenSpell]);
+					currentState = BattleStates.SelectSpellTarget;
 					chosenSpell = 0;
 				}
+				else if(Input.GetButtonDown("Fire2"))
+				{
+					if(turnPlayerSpells.Count > 0){	
+						tempCharge += turnPlayerSpells.Last().Cost;			
+						turnPlayerSpells.RemoveAt(turnPlayerSpells.Count - 1);
+						targets.RemoveAt(turnPlayerSpells.Count - 1);
+						numTurns++;
+					}
+					else
+					{
+						Messenger.Broadcast("SelectAction");
+						currentState = BattleStates.SelectAction;
+						chosenSpell = 0;
+					}
+				}
+				else if(Input.GetAxis("Vertical") > 0 || Input.GetAxis("Horizontal") > 0)
+				{
+					if(chosenSpell < turnPlayer.knownSpells.Count - 1)
+						chosenSpell++;
+					else 
+						chosenSpell = 0;
+					while(turnPlayer.knownSpells[chosenSpell].Cost > tempCharge){
+						if (chosenSpell < turnPlayer.knownSpells.Count - 1)
+							chosenSpell++;
+						else
+							chosenSpell = 0;
+					}
+					Messenger.Broadcast<int>("UpDown",chosenAction);
+				}
+				else if(Input.GetAxis("Vertical") < 0 || Input.GetAxis("Horizontal") < 0)
+				{
+					if(chosenSpell > 0)
+						chosenSpell--;
+					else 
+						chosenSpell = turnPlayer.knownSpells.Count - 1;
+					while(turnPlayer.knownSpells[chosenSpell].Cost > tempCharge){
+						if (chosenSpell > 0)
+							chosenSpell--;
+						else
+							chosenSpell = turnPlayer.knownSpells.Count - 1;
+					}
+					Messenger.Broadcast<int>("UpDown",chosenAction);
+				}
 			}
+			//else choose random move or create AI function to select a move and target
+				//be sure to count the moves per turn in the AI attack function
 			break;
 //*********************************************************
 //SELECT SPELL TARGET
@@ -307,7 +340,8 @@ public class TurnManager : MonoBehaviour {
 					foreach(Entity possibletarget in people)
 						if( possibletarget is EnemyEntity && possibletarget.health > 0.0f)
 							targetsToChoose.Add(possibletarget);
-				}
+				}				
+				Messenger.Broadcast<List<Entity>>("SelectSpellTarget", targetsToChoose);
 				break;
 			case TargetType.SingleAlly:
 				if( targetsToChoose.Count <= 0)
@@ -316,6 +350,7 @@ public class TurnManager : MonoBehaviour {
 						if(possibletarget is PlayerEntity)
 							targetsToChoose.Add(possibletarget);
 				}
+				Messenger.Broadcast<List<Entity>>("SelectSpellTarget", targetsToChoose);
 				break;
 			default:
 				GameObject CurrentTarget = new GameObject();
@@ -324,30 +359,18 @@ public class TurnManager : MonoBehaviour {
 				numTurns --;
 				if(numTurns > 0)
 				{
+					Messenger.Broadcast("SelectMove");
 					currentState = BattleStates.SelectMove;
 				}
 				else
 				{
+					Messenger.Broadcast("ConfirmMove");
 					currentState = BattleStates.ConfirmMove;
 				}
 				break;
 			}		
 			
-			if(Input.GetAxis("Vertical") > 0 || Input.GetAxis("Horizontal") > 0)
-			{
-				if(chosenTarget < targetsToChoose.Count)
-					chosenTarget++;
-				else
-					chosenTarget = 0;
-			}
-			else if(Input.GetAxis("Vertical") < 0 || Input.GetAxis("Horizontal") < 0)
-			{
-				if(chosenTarget > 0)
-					chosenTarget--;
-				else
-					chosenTarget = targetsToChoose.Count;
-			}
-			else if(Input.GetButtonDown("Fire1"))
+			if(Input.GetButtonDown("Fire1"))
 			{
 				targets.Add(targetsToChoose[chosenTarget].gameObject);
 				chosenTarget = 0;
@@ -356,10 +379,12 @@ public class TurnManager : MonoBehaviour {
 				numTurns --;
 				if(numTurns > 0)
 				{
+					Messenger.Broadcast("SelectMove");
 					currentState = BattleStates.SelectMove;
 				}
 				else
 				{
+					Messenger.Broadcast("ConfirmMove");
 					currentState = BattleStates.ConfirmMove;
 				}
 			}
@@ -368,8 +393,25 @@ public class TurnManager : MonoBehaviour {
 				tempCharge += turnPlayerSpells.Last().Cost;	
 				turnPlayerSpells.RemoveAt(turnPlayerSpells.Count - 1);
 				targetsToChoose.Clear();
+				Messenger.Broadcast("SelectMove");
 				currentState = BattleStates.SelectMove;
 				chosenTarget = 0;
+			}
+			else if(Input.GetAxis("Vertical") > 0 || Input.GetAxis("Horizontal") > 0)
+			{
+				if(chosenTarget < targetsToChoose.Count)
+					chosenTarget++;
+				else
+					chosenTarget = 0;
+				Messenger.Broadcast<int>("UpDown",chosenAction);
+			}
+			else if(Input.GetAxis("Vertical") < 0 || Input.GetAxis("Horizontal") < 0)
+			{
+				if(chosenTarget > 0)
+					chosenTarget--;
+				else
+					chosenTarget = targetsToChoose.Count;
+				Messenger.Broadcast<int>("UpDown",chosenAction);
 			}
 			break;
 //*********************************************************
@@ -378,6 +420,7 @@ public class TurnManager : MonoBehaviour {
 		case BattleStates.ConfirmMove:
 			if(Input.GetButtonDown("Fire1"))
 			{
+				Messenger.Broadcast("MoveExecution");
 				currentState = BattleStates.MoveExecution;
 			}
 			else if(Input.GetButtonDown("Fire2"))
@@ -386,6 +429,7 @@ public class TurnManager : MonoBehaviour {
 				turnPlayerSpells.RemoveAt(turnPlayerSpells.Count - 1);
 				targets.RemoveAt(turnPlayerSpells.Count - 1);
 				numTurns++;
+				Messenger.Broadcast("SelectMove");
 				currentState = BattleStates.SelectMove;
 			}
 			break;
@@ -396,6 +440,8 @@ public class TurnManager : MonoBehaviour {
 			//Moves are executed in the order in which they where added to the move execution list
 			castSpells();
 			//After all the moves are executed in the list, Manager should go into the Outcome phase.
+			
+			Messenger.Broadcast("Outcome");
 			currentState = BattleStates.Outcome;
 
 			break;
@@ -452,6 +498,8 @@ public class TurnManager : MonoBehaviour {
 					turnQueue.Add(person);
 				}
 			}
+			
+			Messenger.Broadcast<Entity>("Start",turnPlayer);
 			currentState = BattleStates.Start;
 
 			break;
@@ -460,6 +508,7 @@ public class TurnManager : MonoBehaviour {
 			break;
 
 		}
+
 
 	
 	}
@@ -476,8 +525,6 @@ public class TurnManager : MonoBehaviour {
 
 	}
 
-
-
 	public void PopulateList(List<Entity> PlayerParty, List<Entity> EnemyParty)
 	{
 		foreach (Entity ally in PlayerParty) 
@@ -492,10 +539,10 @@ public class TurnManager : MonoBehaviour {
 			turnQueue.Add(enemy);
 		}
 
+		
+		Messenger.Broadcast<Entity>("Start",turnPlayer);
 		currentState = BattleStates.Start;
 	}
-
-
 
 	public void Win()
 	{
@@ -504,8 +551,6 @@ public class TurnManager : MonoBehaviour {
 		currentState = BattleStates.NoBattle;
 	}
 
-
-
 	public void Lose()
 	{
 		turnQueue.Clear ();
@@ -513,13 +558,10 @@ public class TurnManager : MonoBehaviour {
 		currentState = BattleStates.NoBattle;
 	}
 
-
-
 	public void addSpell(Spell spell)
 	{
 		tempCharge -= spell.Cost;
 		turnPlayerSpells.Add (spell);
-
 	}
 
 
