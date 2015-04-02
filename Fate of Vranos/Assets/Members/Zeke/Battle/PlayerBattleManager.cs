@@ -28,7 +28,7 @@ public class PlayerBattleManager : MonoBehaviour {
 		_playerBattleController = GetComponent<PlayerBattleController> ();
 
 		// Adding the spells to a list
-		spells.Add( new Fireball() );
+		spells.Add( new FireballOld() );
 		spells.Add( new ThunderStrike() );
 		spells.Add( new HolyStrike() );
 		spells.Add(new FateOfVranos ());

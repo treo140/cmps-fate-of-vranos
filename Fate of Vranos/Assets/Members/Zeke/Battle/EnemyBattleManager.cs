@@ -29,7 +29,7 @@ public class EnemyBattleManager : MonoBehaviour {
 		_playerController = player.GetComponent<PlayerController> ();
 
 		enemySpells [0] = new Mudball(gameObject);
-		enemySpells [1] = new Fireball(gameObject);
+		enemySpells [1] = new FireballOld(gameObject);
 		enemySpells [2] = new ThunderStrike(gameObject);
 		enemySpells [3] = new Iceball(gameObject);
 		enemySpells [4] = new FateOfVranos();

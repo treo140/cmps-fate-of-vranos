@@ -11,7 +11,7 @@ public class BattleScript : MonoBehaviour {
 	void Start () {
 
 		List<BaseSpell> spells = new List<BaseSpell>();
-		spells.Add( new Fireball() );
+		spells.Add( new FireballOld() );
 		_player = GetComponent<PlayerBattleManager>();
 
 		Messenger.AddListener("startBattle", startBattle);
