@@ -20,7 +20,7 @@ public class SpellTest : MonoBehaviour {
 	void Start () 
 	{
 
-		Spells = new Dictionary<string, GameObject> ();
+		/*Spells = new Dictionary<string, GameObject> ();
 
 		for (int i = 0; i < prefab.Length; i++) 
 		{
@@ -29,13 +29,24 @@ public class SpellTest : MonoBehaviour {
 		}
 
 		parTrans = transform.position;	// get the parent's transform vector
-		InstanceObject();				// create the spell in spellbook and instantiate the prefab
+		InstanceObject();				// create the spell in spellbook and instantiate the prefab*/
 
 	}
 
 	void Awake ()
 	{
 	 
+		Spells = new Dictionary<string, GameObject> ();
+		
+		for (int i = 0; i < prefab.Length; i++) 
+		{
+			Spells.Add(spellName[i], prefab[i]);
+			Debug.Log(spellName[i] + " " + prefab[i].name);
+		}
+		
+		parTrans = transform.position;	// get the parent's transform vector
+		InstanceObject();				// create the spell in spellbook and instantiate the prefab
+
 	}
 	
 	// Update is called once per frame
@@ -49,23 +60,19 @@ public class SpellTest : MonoBehaviour {
 			meteor.Cast (target[0]);
 		}
 
-<<<<<<< .mine
-			GO.transform.position = new Vector3(target.transform.position.x, (target.transform.position.y + 10),
-			                                    target.transform.position.z);
-			meteor.Cast (target);
-		}
-=======
+			
 
->>>>>>> .r9
+
 	}
 
 	public void InstanceObject()
 	{
-		//target[0] = GameObject.Find("Enemy Transform"); // Find the enemy's transform for the homing attacks
+		target[0] = GameObject.Find("Enemy Transform"); // Find the enemy's transform for the homing attacks
 
-		target[0] = GameObject.Find("_Aqua_Knight"); // Find the enemy's transform for the homing attacks
+		//target[0] = GameObject.Find("_Aqua_Knight"); // Find the enemy's transform for the homing attacks
 
-		platform = GameObject.Find("Portal Transform");  // Not too sure what this is used for
+		//platform = GameObject.Find("Portal Transform");  // Not too sure what this is used for
+		platform = GameObject.Find("Spell Transform");
 
 		// Instantiate the spell prefab to hurt the enemy
 		//GO = Instantiate (prefab [0], new Vector3 (transform.position.x, (transform.position.y + 10f),
@@ -85,7 +92,7 @@ public class SpellTest : MonoBehaviour {
 		//GO.SetActive (false);
 
 		// make a spell in the spellbook so the player can use it to attack
-		meteor = new RocketBarrage (50f, 1, SpellEffect.none, Spells, platform, TargetType.SingleEnemy, gameObject);
+		//meteor = new FireBall (50f, 1, SpellEffect.none, Spells, platform, TargetType.SingleEnemy, gameObject);
 	}
 
 

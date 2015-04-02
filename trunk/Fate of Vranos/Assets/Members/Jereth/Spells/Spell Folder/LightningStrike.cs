@@ -6,7 +6,6 @@ public class LightningStrike : Spell
 {
 
 	public LightningStrike(float damage, int cost, SpellEffect effect, Dictionary<string, GameObject> Spells, 
-	                       GameObject Platform, TargetType tar,
 	                       GameObject caster)
 	{
 
@@ -17,8 +16,8 @@ public class LightningStrike : Spell
 		Effect = effect;
 		particleSystem = new List<GameObject> ();
 		particleSystem.Add (Spells ["Lightning Strike"]);
-		platform = Platform;
-		tarType = tar;
+		platform = GameObject.Find("Spell Transform");
+		tarType = TargetType.SingleEnemy;
 		Caster = caster;
 
 	}
@@ -33,12 +32,14 @@ public class LightningStrike : Spell
 		// Reference the start position of the Lightning Strike
 		Vector3 spellStart = Caster.transform.position;
 
+		EffectSettings eSettings = particleSystem [0].GetComponent<EffectSettings> ();
+		eSettings.Target = target.transform.parent.gameObject;
+
 		// Instatiate the Lightning Strike
 		GameObject GO;
 		GO = GameObject.Instantiate (particleSystem [0], spellStart, particleSystem [0].transform.rotation) as GameObject;
 
-		EffectSettings eSettings = particleSystem [0].GetComponent<EffectSettings> ();
-		eSettings.Target = target;
+
 
 	}
 
