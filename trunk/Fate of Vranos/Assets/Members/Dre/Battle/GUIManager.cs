@@ -33,12 +33,11 @@ public class BattleGUIManager : MonoBehaviour {
 
 	public int[] outcome;
 
-	// Use this for initialization
-	void Start () {
-	
-
-
-
+	void OnEnable(){
+		
+		
+		
+		
 		Messenger.AddListener<Entity> ("StartGUI",StartGUI);
 		Messenger.AddListener ("SelectAction",SelectAction);
 		Messenger.AddListener ("SelectMove",SelectMove);
@@ -50,11 +49,16 @@ public class BattleGUIManager : MonoBehaviour {
 		Messenger.AddListener ("MoveExecution",MoveExecution);
 		Messenger.AddListener ("Outcome",Outcome);
 		Messenger.AddListener<bool> ("EndGUI",EndGUI);
-
+		
 		Messenger.AddListener<int>("UpDown", UpDown);
-
-
+		
+		
 		Messenger.AddListener<int[]> ("SetOutcome", SetOutcome);
+
+	}
+
+	// Use this for initialization
+	void Start () {
 	
 	}
 	
