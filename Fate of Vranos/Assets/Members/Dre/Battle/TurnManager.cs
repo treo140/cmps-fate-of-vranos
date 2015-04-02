@@ -338,7 +338,7 @@ public class TurnManager : MonoBehaviour {
 				if( targetsToChoose.Count <= 0)
 				{
 					foreach(Entity possibletarget in people)
-						if( possibletarget is EnemyEntity && possibletarget.health > 0.0f)
+						if( possibletarget is EnemyEntity && possibletarget.currentHealth > 0.0f)
 							targetsToChoose.Add(possibletarget);
 				}				
 				Messenger.Broadcast<List<Entity>>("SelectSpellTarget", targetsToChoose);
@@ -522,7 +522,6 @@ public class TurnManager : MonoBehaviour {
 	public void AddAlly(Entity ally)
 	{
 		people.Insert (people.IndexOf (turnPlayer) + 1, ally);
-
 	}
 
 	public void PopulateList(List<Entity> PlayerParty, List<Entity> EnemyParty)
@@ -573,6 +572,7 @@ public class TurnManager : MonoBehaviour {
 
 		foreach(Spell spell in turnPlayerSpells){
 			//subtract cost from player charge
+			turnPlayer.currentCharge -= spell.Cost;
 			switch(spell.tarType)
 			{
 				case TargetType.SingleEnemy:
