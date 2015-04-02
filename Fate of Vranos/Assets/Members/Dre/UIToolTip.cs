@@ -18,7 +18,7 @@ public class UIToolTip : MonoBehaviour {
 	void OnHover(bool isOver){
 		if (isOver) {
 						if (gameObject.name == "fireball_button")
-								description.text = new Fireball ().Description + " Cooldown:" + new Fireball ().Cooldown;
+								description.text = new FireballOld ().Description + " Cooldown:" + new FireballOld ().Cooldown;
 						else if (gameObject.name == "thunderstrike_button")
 								description.text = new ThunderStrike ().Description + " Cooldown:" + new ThunderStrike ().Cooldown;
 						else if (gameObject.name == "holystrike_button")

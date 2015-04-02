@@ -572,7 +572,7 @@ public class TurnManager : MonoBehaviour {
 
 		foreach(Spell spell in turnPlayerSpells){
 			//subtract cost from player charge
-			turnPlayer.currentCharge -= spell.Cost;
+			//turnPlayer.currentCharge -= spell.Cost;
 			switch(spell.tarType)
 			{
 				case TargetType.SingleEnemy:
