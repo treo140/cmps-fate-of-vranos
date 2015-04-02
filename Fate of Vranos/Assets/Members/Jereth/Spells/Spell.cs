@@ -38,6 +38,23 @@ public abstract class Spell
 	}
 
 	public Spell(float damage, int cost, SpellEffect effect, Dictionary<string, GameObject> Spells,
+	                GameObject caster)
+	{
+		Name = "Fireball";
+		Description = "Throw a ball of fire magic at your enemy! Doing this may leave a burn.";
+		Damage = damage;
+		Cost = cost;
+		Effect = effect;
+		particleSystem = new List<GameObject> ();
+		particleSystem.Add (Spells ["Red Fireball"]);
+		particleSystem.Add (Spells ["Burn"]);
+		platform = GameObject.Find("Spell Transform");
+		tarType = TargetType.SingleEnemy;
+		Caster = caster;
+
+	}
+
+	public Spell(float damage, int cost, SpellEffect effect, Dictionary<string, GameObject> Spells,
 	             GameObject Platform, TargetType tar,
 	             GameObject caster)
 	{
